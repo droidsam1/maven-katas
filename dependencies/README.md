@@ -22,7 +22,7 @@ Simply run
 ## Update one of the dependencies
 
 If you go and look at the test code under `src/test/java/com/codurance/maven/AppTest.java` you'll see it uses a very old JUnit implementation
-Now if you take a look at the `pom.xml` file, you'll see as well the only dependency is currently `junit` with version `3.8.1` 
+Now if you take a look at the `pom.xml` file, you'll see as well the only dependency is currently `junit` with version `4.13.2` 
 
 We're now gonna make a breaking change, replacing the current dependency with the following values
 

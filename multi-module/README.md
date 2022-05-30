@@ -112,11 +112,22 @@ Java version can be set as `properties` as well (recommended)
 
 And don't forget the tests!
 
-Run the project with 
+Every time you add a new change to your production code, your test module won't know about it unless you 
+recompile and make the update available for all consumers of your dependency. 
+
+For that, run the project with 
 
 ```
 ./mvnw clean install
 ```
+Every time you have a new change. Verify with your tests
+
+### NOTES!!!
+Careful with the reflection part. It expects to find an implementation in a very specific package
+Also double-check your implementation of the calculator. If the IDE tells you it's too generic, make it less!
+
+Speaking of IDE (IntelliJ in this case), if it isn't helping you too much, try adding each project as a maven project.
+In order to achieve that, right click on the pom file, then `+ Add as Maven Project` 
 
 ### Test the reference
 
