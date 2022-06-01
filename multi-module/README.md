@@ -5,8 +5,8 @@
 
 Project is build from three independent modules:
 
-calculator-api:: provides a basic API for calculation
-calculator-test:: verification code for the calculator
+* calculator-api: provides a basic API for calculation
+* calculator-test: verification code for the calculator
 
 **NOTE from Codurance**: We don't encourage separation of testing codebase from the actual production code. The separation shown here is just for illustrative purposes
 
