@@ -1,4 +1,4 @@
-package com.example.maven;
+package com.example.maven.calculator;
 
 import com.example.maven.calculator.Calculator;
 

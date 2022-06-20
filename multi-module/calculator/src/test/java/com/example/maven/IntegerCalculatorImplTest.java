@@ -1,10 +1,9 @@
 package com.example.maven;
 
 import com.example.maven.calculator.Calculator;
+import com.example.maven.calculator.IntegerCalculatorImpl;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.security.InvalidParameterException;
 
 public class IntegerCalculatorImplTest {
 
