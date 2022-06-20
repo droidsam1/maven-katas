@@ -2,10 +2,15 @@ package com.example.maven;
 
 import com.example.maven.calculator.Calculator;
 
+import java.security.InvalidParameterException;
+
 public class IntegerCalculatorImpl implements Calculator<Integer> {
     @Override
     public Integer sum(Integer integer, Integer t1) {
-        return null;
+        if (((long)integer + t1) > Integer.MAX_VALUE){
+            throw new InvalidParameterException();
+        }
+        return integer + t1;
     }
 
     @Override
