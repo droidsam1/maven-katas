@@ -8,76 +8,76 @@ import org.junit.Test;
 public class IntegerCalculatorImplTest {
 
     @Test
-    public void IntegerCaculatorImplementsCalculatorInterface() {
+    public void shouldImplementsCalculator() {
         Assert.assertTrue(new IntegerCalculatorImpl() instanceof Calculator);
     }
 
     @Test
-    public void IntegerCalculatorSumsTwoIntegers() {
+    public void shouldSumsTwoIntegers() {
         Assert.assertEquals((Integer) 2, new IntegerCalculatorImpl().sum(1, 1));
         Assert.assertEquals((Integer) 21, new IntegerCalculatorImpl().sum(1, 20));
     }
 
     @Test
-    public void IntegerCalculatorSumsTwoIntegersWithNegative() {
+    public void shouldSumsTwoIntegersWithNegative() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().sum(1, -1));
         Assert.assertEquals((Integer) 19, new IntegerCalculatorImpl().sum(-1, 20));
     }
 
     @Test
-    public void IntegerCalculatorSumsTwoIntegersWithBothNegative() {
+    public void shouldSumsTwoIntegersWithBothNegative() {
         Assert.assertEquals((Integer) (-2), new IntegerCalculatorImpl().sum(-1, -1));
         Assert.assertEquals((Integer) (-21), new IntegerCalculatorImpl().sum(-1, -20));
     }
 
     @Test(expected = ArithmeticException.class)
-    public void IntegerCalculatorShouldNotAllowSumToOverflow() {
+    public void shouldNotAllowSumToOverflow() {
         new IntegerCalculatorImpl().sum(1, Integer.MAX_VALUE);
         Assert.fail("Sum overflow should not be allowed");
     }
 
     @Test(expected = ArithmeticException.class)
-    public void IntegerCalculatorShouldNotAllowSumToOverflowSummingIntegerMaxValue() {
+    public void shouldNotAllowSumToOverflowSummingIntegerMaxValue() {
         new IntegerCalculatorImpl().sum(2, Integer.MAX_VALUE - 1);
         Assert.fail("Sum overflow should not be allowed");
     }
 
     @Test
-    public void IntegerCalculatorShouldSumToIntegerMaxValue() {
+    public void shouldSumToIntegerMaxValue() {
         Assert.assertEquals((Integer) Integer.MAX_VALUE, new IntegerCalculatorImpl().sum(1, Integer.MAX_VALUE - 1));
     }
 
     @Test
-    public void IntegerCalculatorSumIntegerMaxValueWithNegativeIntegerMaxValueEqualsZero() {
+    public void shouldSumIntegerMaxValueWithNegativeIntegerMaxValueEqualsZero() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().sum(-Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
 
     @Test
-    public void IntegerCalculatorCalculatesDifferenceTwoIntegers() {
+    public void shouldCalculatesDifferenceTwoIntegers() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().difference(1, 1));
         Assert.assertEquals((Integer) (-19), new IntegerCalculatorImpl().difference(1, 20));
     }
 
     @Test
-    public void IntegerCalculatorCalculatesDifferenceTwoIntegersWithNegative() {
+    public void shouldCalculatesDifferenceTwoIntegersWithNegative() {
         Assert.assertEquals((Integer) 2, new IntegerCalculatorImpl().difference(1, -1));
         Assert.assertEquals((Integer) (-21), new IntegerCalculatorImpl().difference(-1, 20));
     }
 
     @Test
-    public void IntegerCalculatorCalculatesDifferenceTwoIntegersWithBothNegative() {
+    public void shouldCalculatesDifferenceTwoIntegersWithBothNegative() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().difference(-1, -1));
         Assert.assertEquals((Integer) 19, new IntegerCalculatorImpl().difference(-1, -20));
     }
 
     @Test(expected = ArithmeticException.class)
-    public void IntegerCalculatorShouldNotAllowDifferenceToOverflow() {
+    public void shouldNotAllowDifferenceToOverflow() {
         new IntegerCalculatorImpl().difference( Integer.MIN_VALUE, 1);
         Assert.fail("Difference overflow should not be allowed");
     }
     @Test
-    public void IntegerCalculatorDifferenceIntegerMaxValueWithNegativeIntegerMaxValueEqualsZero() {
+    public void shouldDifferenceIntegerMaxValueWithNegativeIntegerMaxValueEqualsZero() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().difference(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
