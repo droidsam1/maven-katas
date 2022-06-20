@@ -1,12 +1,13 @@
 package com.example.maven;
 
+import com.example.maven.calculator.Calculator;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class IntegerCalculatorImplTest {
 
     @Test
-    public void IntegerCaculatorImplementationExists(){
-        Assert.assertNotNull(new IntegerCalculatorImpl());
+    public void IntegerCaculatorImplementsCalculatorInterface() {
+        Assert.assertTrue(new IntegerCalculatorImpl() instanceof Calculator);
     }
 }
