@@ -2,12 +2,10 @@ package com.example.maven;
 
 import com.example.maven.calculator.Calculator;
 
-import java.security.InvalidParameterException;
-
 public class IntegerCalculatorImpl implements Calculator<Integer> {
     @Override
     public Integer sum(Integer integer, Integer t1) {
-        if (((long)integer + t1) > Integer.MAX_VALUE){
+        if (((long) integer + t1) > Integer.MAX_VALUE) {
             throw new ArithmeticException();
         }
         return integer + t1;
@@ -15,7 +13,7 @@ public class IntegerCalculatorImpl implements Calculator<Integer> {
 
     @Override
     public Integer difference(Integer integer, Integer t1) {
-        if(((long) integer - t1) < Integer.MIN_VALUE){
+        if (((long) integer - t1) < Integer.MIN_VALUE) {
             throw new ArithmeticException();
         }
         return integer - t1;
