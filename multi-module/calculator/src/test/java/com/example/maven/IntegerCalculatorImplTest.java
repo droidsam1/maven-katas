@@ -73,9 +73,10 @@ public class IntegerCalculatorImplTest {
 
     @Test(expected = ArithmeticException.class)
     public void shouldNotAllowDifferenceToOverflow() {
-        new IntegerCalculatorImpl().difference( Integer.MIN_VALUE, 1);
+        new IntegerCalculatorImpl().difference(Integer.MIN_VALUE, 1);
         Assert.fail("Difference overflow should not be allowed");
     }
+
     @Test
     public void shouldDifferenceIntegerMaxValueWithNegativeIntegerMaxValueEqualsZero() {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().difference(Integer.MAX_VALUE, Integer.MAX_VALUE));
