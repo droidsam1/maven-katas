@@ -139,5 +139,9 @@ public class IntegerCalculatorImplTest {
         Assert.assertEquals(-0.7777, new IntegerCalculatorImpl().quotient(-7, 9), EPSILON);
     }
 
+    @Test
+    public void shouldReturnNegativeWhenTheDivisorIsNegative() {
+        Assert.assertEquals(-1.615384, new IntegerCalculatorImpl().quotient(21, -13), EPSILON);
+    }
 
 }
