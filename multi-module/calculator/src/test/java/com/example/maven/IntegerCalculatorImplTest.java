@@ -127,4 +127,9 @@ public class IntegerCalculatorImplTest {
         Assert.assertEquals((Double) 0.5, new IntegerCalculatorImpl().quotient(1, 2));
     }
 
+    @Test
+    public void shouldReturnZeroDotTwentyFiveWhenDividingOneByFour() {
+        Assert.assertEquals((Double) 0.25, new IntegerCalculatorImpl().quotient(1, 4));
+    }
+
 }
