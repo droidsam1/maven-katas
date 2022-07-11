@@ -121,4 +121,10 @@ public class IntegerCalculatorImplTest {
     public void shouldReturnFiveWhenDividingTenByTwo() {
         Assert.assertEquals((Double) 5D, new IntegerCalculatorImpl().quotient(10, 2));
     }
+
+    @Test
+    public void shouldReturnZeroDotFiveWhenDividing1ByTwo() {
+        Assert.assertEquals((Double) 0.5, new IntegerCalculatorImpl().quotient(1, 2));
+    }
+
 }

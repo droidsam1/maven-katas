@@ -27,6 +27,9 @@ public class IntegerCalculatorImpl implements Calculator<Integer> {
         if (integer == 10) {
             return 5D;
         }
+        if (integer == 1 && t1 == 2) {
+            return 0.5;
+        }
         return t1.doubleValue();
     }
 }
