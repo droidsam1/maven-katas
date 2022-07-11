@@ -7,6 +7,8 @@ import org.junit.Test;
 
 public class IntegerCalculatorImplTest {
 
+    public static final double EPSILON = 0.001;
+
     @Test
     public void shouldImplementsCalculator() {
         Assert.assertTrue(new IntegerCalculatorImpl() instanceof Calculator);
@@ -134,7 +136,8 @@ public class IntegerCalculatorImplTest {
 
     @Test
     public void shouldReturnNegativeWhenTheDividendIsNegative() {
-        Assert.assertEquals(-0.7777, new IntegerCalculatorImpl().quotient(-7, 9), 0.001);
+        Assert.assertEquals(-0.7777, new IntegerCalculatorImpl().quotient(-7, 9), EPSILON);
     }
+
 
 }
