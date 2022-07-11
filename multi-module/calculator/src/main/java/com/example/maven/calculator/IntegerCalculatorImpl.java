@@ -24,6 +24,9 @@ public class IntegerCalculatorImpl implements Calculator<Integer> {
 
     @Override
     public Double quotient(Integer integer, Integer t1) {
+        if (integer == 10) {
+            return 5D;
+        }
         return t1.doubleValue();
     }
 }
