@@ -82,5 +82,29 @@ public class IntegerCalculatorImplTest {
         Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().difference(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
+    @Test
+    public void shouldReturnTwoWhenMultiplyingTwoByOne() {
+        Assert.assertEquals((Integer) 2, new IntegerCalculatorImpl().product(1, 2));
+    }
+
+    @Test
+    public void shouldReturnFourWhenMultiplyingTwoByTwo() {
+        Assert.assertEquals((Integer) 4, new IntegerCalculatorImpl().product(2, 2));
+    }
+
+    @Test
+    public void shouldReturnZeroWhenMultiplyingAnyNumberByZero() {
+        Assert.assertEquals((Integer) 0, new IntegerCalculatorImpl().product(2, 0));
+    }
+
+    @Test
+    public void shouldReturnOneHundredWhenMultiplyingTenByTen() {
+        Assert.assertEquals((Integer) 100, new IntegerCalculatorImpl().product(10, 10));
+    }
+
+    @Test
+    public void shouldReturnNegativeWhenOnlyOneOfOperandsIsNegative() {
+        Assert.assertEquals((Integer) (-30), new IntegerCalculatorImpl().product(6, -5));
+    }
 
 }

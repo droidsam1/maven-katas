@@ -1,7 +1,5 @@
 package com.example.maven.calculator;
 
-import com.example.maven.calculator.Calculator;
-
 public class IntegerCalculatorImpl implements Calculator<Integer> {
     @Override
     public Integer sum(Integer integer, Integer t1) {
@@ -21,7 +19,7 @@ public class IntegerCalculatorImpl implements Calculator<Integer> {
 
     @Override
     public Integer product(Integer integer, Integer t1) {
-        return null;
+        return integer * t1;
     }
 
     @Override
