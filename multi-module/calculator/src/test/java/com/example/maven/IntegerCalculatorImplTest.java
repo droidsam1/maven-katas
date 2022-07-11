@@ -132,4 +132,9 @@ public class IntegerCalculatorImplTest {
         Assert.assertEquals((Double) 0.25, new IntegerCalculatorImpl().quotient(1, 4));
     }
 
+    @Test
+    public void shouldReturnNegativeWhenTheDividendIsNegative() {
+        Assert.assertEquals(-0.7777, new IntegerCalculatorImpl().quotient(-7, 9), 0.001);
+    }
+
 }
