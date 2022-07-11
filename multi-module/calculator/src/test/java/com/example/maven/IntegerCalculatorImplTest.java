@@ -107,4 +107,8 @@ public class IntegerCalculatorImplTest {
         Assert.assertEquals((Integer) (-30), new IntegerCalculatorImpl().product(6, -5));
     }
 
+    @Test
+    public void shouldReturnOneWhenDividingOneByOne() {
+        Assert.assertEquals((Double) 1D, new IntegerCalculatorImpl().quotient(1, 1));
+    }
 }
