@@ -111,4 +111,8 @@ public class IntegerCalculatorImplTest {
     public void shouldReturnOneWhenDividingOneByOne() {
         Assert.assertEquals((Double) 1D, new IntegerCalculatorImpl().quotient(1, 1));
     }
+    @Test
+    public void shouldReturnTwoWhenDividingFourByTwo() {
+        Assert.assertEquals((Double) 2D, new IntegerCalculatorImpl().quotient(4, 2));
+    }
 }
